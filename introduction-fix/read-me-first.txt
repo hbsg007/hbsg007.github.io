@@ -1,0 +1,38 @@
+INTRODUCTION PAGE FIX — HIMMAT GREWAL
+
+The itis3135 folder contains the corrected introduction page and all of its
+previously missing support files, including your supplied photo.
+
+UPLOAD
+1. Unzip this download.
+2. Open github.com/hbsg007/hbsg007.github.io at the repository ROOT.
+3. Choose Add file > Upload files.
+4. Drag the extracted itis3135 folder onto the upload area. Upload the folder,
+   not the ZIP, and do not place it inside an existing itis3135 folder.
+5. Confirm the listed paths start with itis3135/ and commit the changes.
+6. Wait for the latest Pages deployment to succeed, then reload:
+   https://hbsg007.github.io/itis3135/introduction.html
+7. Copy the same itis3135 files into /public_html/itis3135/ with FileZilla.
+
+Your photo is already included as itis3135/images/himmat-grewal.jpeg.
+The HTML displays it at 300 by 400 pixels without stretching or cropping.
+The original image bytes are preserved.
+
+STILL REQUIRED
+Replace YOUR_FREECODECAMP_USERNAME and YOUR_CODECADEMY_USERNAME in the footer
+with your actual usernames. These remain explicit placeholders because the
+correct profile URLs have not been supplied. Do this on the contract page too.
+
+The course checker explicitly requires an h6 display name, while the latest
+Nu HTML validator flags h6 after h2 as skipping heading levels. The required h6
+is retained with aria-level="3" for screen readers. Ask the instructor which
+rule to follow if the live HTML/cloud check reports this conflict. Changing
+both h6 tags to h3 fixes HTML heading order but fails the course's h6 check.
+Neither validator has been disabled or altered.
+
+Open Accumulus > WCAG manually after deployment. The included design-firm page
+is the fictional Grewal Web Design page from the earlier kit; its contact
+information is clearly labeled as sample information.
+
+If your course home page still only links to Home, add Introduction and Contract
+links to its existing navigation so visitors can reach these pages.
