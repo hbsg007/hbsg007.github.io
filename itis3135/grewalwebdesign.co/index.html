@@ -3,64 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grewal Web Design is Himmat Grewal's concept studio for clear, accessible websites and thoughtful visual identities.">
     <title>Grewal Web Design | Services</title>
-    <link rel="icon" type="image/svg+xml" href="images/grewal-studio-mark.svg">
+    <link rel="icon" type="image/svg+xml" href="images/grewal-favicon.svg">
     <style>
-        body { max-width: 880px; margin: 40px auto; padding: 0 24px; background-color: #eee8ed; color: #39343d; font-family: Tahoma, sans-serif; line-height: 1.7; }
-        h1 { font-family: "Trebuchet MS", sans-serif; line-height: 1.25; font-size: clamp(1.9rem, 5vw, 2.4rem); }
-        h2 { font-family: "Trebuchet MS", sans-serif; line-height: 1.25; }
-        h3 { font-family: "Trebuchet MS", sans-serif; line-height: 1.25; }
-        header, main, footer { padding: 20px 0; }
-        main, footer { border-top: 1px solid #8e7d91; }
-        header img { display: block; }
-        a, a:visited { color: #59425e; text-underline-offset: 4px; }
-        a:hover { text-decoration-thickness: 3px; }
-        a:focus-visible { outline: 3px solid #59425e; outline-offset: 4px; }
-        ul { list-style-type: square; padding-left: 24px; }
-        li { margin: 10px 0; }
-        address { font-style: normal; }
-        @media (max-width: 600px) { body { margin: 20px auto; padding: 0 18px; } }
+        /* Five-color palette selected with the Coolors generator, October 13, 2026:
+           https://coolors.co/957186-d9b8c4-703d57-402a2c-241715
+           Dusty Mauve #957186: decorative rules and accents.
+           Pastel Petal #d9b8c4: page background and light text.
+           Mauve Shadow #703d57: links and list markers.
+           Deep Mocha #402a2c: headings and the contact panel.
+           Coffee Bean #241715: body text and focus outlines. */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 32px;
+            background-color: #d9b8c4;
+            color: #241715;
+            font-family: Tahoma, sans-serif;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 80px minmax(0, 1fr);
+            column-gap: 24px;
+            padding: 48px 0 36px;
+            border-bottom: 2px solid #957186;
+            align-items: center;
+        }
+
+        h1 {
+            grid-column: 2;
+            grid-row: 1;
+            margin: 0;
+            color: #402a2c;
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: clamp(1.75rem, 4.6vw, 3rem);
+            line-height: 1.15;
+            letter-spacing: -0.035em;
+        }
+
+        header img {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            display: block;
+            width: 80px;
+            height: 80px;
+        }
+
+        header p {
+            grid-column: 2;
+            margin: 8px 0 0;
+        }
+
+        main {
+            padding: 36px 0;
+        }
+
+        h2 {
+            margin: 0 0 20px;
+            color: #402a2c;
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: clamp(1.9rem, 4vw, 2.4rem);
+            line-height: 1.25;
+        }
+
+        h3 {
+            margin: 0 0 16px;
+            color: #402a2c;
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 1.35rem;
+            line-height: 1.3;
+        }
+
+        p {
+            max-width: 72ch;
+            margin: 0 0 20px;
+        }
+
+        section {
+            margin-top: 36px;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px 44px;
+            margin: 0;
+            padding-left: 24px;
+            list-style-type: square;
+        }
+
+        li {
+            padding-left: 6px;
+        }
+
+        li::marker {
+            color: #703d57;
+        }
+
+        li strong {
+            display: block;
+        }
+
+        a,
+        a:visited {
+            color: #703d57;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+            overflow-wrap: anywhere;
+        }
+
+        a:hover {
+            text-decoration-thickness: 3px;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #241715;
+            outline-offset: 5px;
+            border-radius: 2px;
+        }
+
+        section:last-of-type {
+            padding: 28px 32px;
+            border-left: 6px solid #957186;
+            background-color: #402a2c;
+            color: #d9b8c4;
+        }
+
+        section:last-of-type h3 {
+            color: #d9b8c4;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        address p {
+            margin-bottom: 12px;
+        }
+
+        address p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            padding: 24px 0 36px;
+            border-top: 2px solid #957186;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0 20px;
+            }
+
+            header {
+                grid-template-columns: 56px minmax(0, 1fr);
+                column-gap: 16px;
+                padding-top: 28px;
+            }
+
+            header img {
+                grid-row: 1;
+                width: 56px;
+                height: 56px;
+            }
+
+            header p {
+                grid-column: 1 / -1;
+                margin-top: 16px;
+            }
+
+            ul {
+                grid-template-columns: 1fr;
+            }
+
+            section:last-of-type {
+                padding: 24px 20px;
+            }
+        }
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Original studio SVG and page code drafted with ChatGPT assistance, October 2026. -->
+    <!-- Original logo and page developed with ChatGPT assistance, October 2026.
+         grewalwebdesign.co was offered for registration by Namecheap on October 13, 2026.
+         No domain was purchased. This remains a student concept hosted in a domain-named folder.
+         Registrar: https://www.namecheap.com/domains/registration/results/?domain=grewalwebdesign.co -->
     <header>
         <h1>Grewal Web Design</h1>
-        <img src="images/grewal-studio-mark.svg" alt="Grewal Web Design code-bracket logo" width="80" height="80">
+        <img src="images/grewal-studio-mark.svg" alt="Code brackets surrounding a forward slash" width="80" height="80">
         <p><em>Clear websites. Thoughtful details.</em></p>
-        <nav aria-label="Studio navigation"><a href="./">Services</a></nav>
     </header>
     <main>
         <h2>Services</h2>
         <p>
-            Grewal Web Design is a fictional student design studio exploring
-            approachable, accessible websites. Its identity brings together
-            straightforward content, careful typography, and useful navigation.
+            Grewal Web Design is Himmat Grewal's fictional design and development
+            studio in Charlotte, North Carolina. The studio brings a simple idea
+            to every project: a website should make a business easy to understand
+            and give visitors a clear next step. Thoughtful typography, useful
+            content, and an approachable visual identity guide the work.
         </p>
         <p>
-            A typical concept starts with the people using the site: what they
-            need to find, what actions they need to take, and how to make those
-            tasks easier on a phone, laptop, or keyboard.
+            For a client, the studio can plan and build a responsive portfolio,
+            a small-business website, or a focused landing page. Services include
+            organizing content, developing a coordinated color palette, building
+            accessible HTML and CSS layouts, and checking navigation across
+            screen sizes. The result is a straightforward website with clear
+            instructions for future updates.
         </p>
-        <h3>What the Studio Values</h3>
-        <ul>
-            <li>Page layouts that adapt to smaller screens.</li>
-            <li>Readable text and deliberate color contrast.</li>
-            <li>Navigation with clear destinations.</li>
-            <li>Semantic HTML that gives content a useful structure.</li>
-            <li>Consistent visual identity across related pages.</li>
-            <li>Simple, documented code that can be maintained.</li>
-        </ul>
-        <h3>Sample Contact Details</h3>
-        <p>These example details belong to the fictional studio and are not monitored.</p>
-        <address>
-            Email: studio@example.com<br>
-            Phone: (919) 555-0107
-        </address>
+        <section>
+            <h3>Small Studio. Careful Work.</h3>
+            <ul>
+                <li><strong>Designed around real goals.</strong> Every page helps visitors find information or take a useful action.</li>
+                <li><strong>Comfortable on any screen.</strong> Flexible layouts give content room to breathe on phones and larger displays.</li>
+                <li><strong>Accessibility from the start.</strong> Readable contrast, meaningful headings, and visible keyboard focus guide the design.</li>
+                <li><strong>A recognizable identity.</strong> Consistent color, typography, and spacing help a brand feel like itself.</li>
+                <li><strong>Lightweight by design.</strong> Small image files and purposeful code keep unnecessary page weight down.</li>
+                <li><strong>Easy to understand and maintain.</strong> Organized files and practical handoff notes make future changes simpler.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Start a Conversation</h3>
+            <p>This is a student concept studio. The contact details below are fictional examples and are not monitored.</p>
+            <address>
+                <p><strong>Phone</strong><br>(919) 555-0107</p>
+                <p><strong>Email</strong><br>studio@example.com</p>
+                <p><strong>Studio address</strong><br>123 Example Avenue, Suite 200<br>Charlotte, NC 28202</p>
+            </address>
+        </section>
     </main>
     <footer>
-        <p>Page created by Grewal Web Design &copy;2026</p>
+        <p>Page created by <a href="./">Grewal Web Design</a> &copy;2026</p>
+        <!-- Credential name comes from Himmat's previously supplied resume.
+             The following link describes the program; it is not an individual verification badge. -->
+        <p>Himmat Grewal &middot; Fortinet Certified Fundamentals (FCF) in Cybersecurity<br>
+            <a href="https://www.credly.com/org/fortinet/badge/fortinet-certified-fundamentals-cybersecurity">Certification program details</a></p>
     </footer>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
