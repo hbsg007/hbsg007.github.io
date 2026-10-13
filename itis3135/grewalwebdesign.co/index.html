@@ -7,8 +7,9 @@
     <link rel="icon" type="image/svg+xml" href="images/grewal-studio-mark.svg">
     <style>
         body { max-width: 880px; margin: 40px auto; padding: 0 24px; background-color: #eee8ed; color: #39343d; font-family: Tahoma, sans-serif; line-height: 1.7; }
-        h1, h2, h3 { font-family: "Trebuchet MS", sans-serif; line-height: 1.25; }
-        h1 { font-size: 2.4rem; }
+        h1 { font-family: "Trebuchet MS", sans-serif; line-height: 1.25; font-size: clamp(1.9rem, 5vw, 2.4rem); }
+        h2 { font-family: "Trebuchet MS", sans-serif; line-height: 1.25; }
+        h3 { font-family: "Trebuchet MS", sans-serif; line-height: 1.25; }
         header, main, footer { padding: 20px 0; }
         main, footer { border-top: 1px solid #8e7d91; }
         header img { display: block; }
@@ -18,7 +19,7 @@
         ul { list-style-type: square; padding-left: 24px; }
         li { margin: 10px 0; }
         address { font-style: normal; }
-        @media (max-width: 600px) { body { margin: 20px auto; padding: 0 18px; } h1 { font-size: 1.9rem; } }
+        @media (max-width: 600px) { body { margin: 20px auto; padding: 0 18px; } }
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -28,6 +29,7 @@
         <h1>Grewal Web Design</h1>
         <img src="images/grewal-studio-mark.svg" alt="Grewal Web Design code-bracket logo" width="80" height="80">
         <p><em>Clear websites. Thoughtful details.</em></p>
+        <nav aria-label="Studio navigation"><a href="./">Services</a></nav>
     </header>
     <main>
         <h2>Services</h2>
