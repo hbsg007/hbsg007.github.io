@@ -3,62 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The personal homepage of Himmat Grewal, a computer science student interested in cybersecurity, building projects, and volleyball.">
     <title>Himmat Grewal | Home</title>
-    <link rel="icon" type="image/svg+xml" href="images/hg-logo.svg">
-
+    <link rel="icon" type="image/svg+xml" href="images/personal-court-icon.svg">
     <style>
         body {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 24px;
-            background-color: #f5eddf;
-            color: #243447;
-            font-family: Verdana, sans-serif;
-            line-height: 1.6;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 28px;
+            background-color: #101c2c;
+            color: #e3eaf4;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
         }
 
-        h1, h2 {
-            font-family: Georgia, serif;
+        h1, h2, h3 {
+            font-family: "Trebuchet MS", sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 48px 0 30px;
+            border-bottom: 1px solid #40546d;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(1.8rem, 4vw, 2.35rem);
+            line-height: 1.2;
+        }
+
+        nav {
+            flex-shrink: 0;
+            word-spacing: 8px;
         }
 
         a, a:visited {
-            color: #833b16;
+            color: #ffc58a;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;
         }
 
         a:hover {
             text-decoration-thickness: 3px;
         }
 
-        nav {
-            margin: 16px 0;
+        a:focus-visible {
+            outline: 3px solid #ffc58a;
+            outline-offset: 6px;
+            border-radius: 2px;
         }
 
         main {
-            padding: 24px 0;
+            padding-top: 36px;
+        }
+
+        h2 {
+            margin: 0 0 18px;
+            color: #ffc58a;
+            font-size: 1rem;
+            letter-spacing: 0.12em;
+        }
+
+        main > div {
+            display: grid;
+            grid-template-columns: 1.12fr 0.88fr;
+            align-items: center;
+            gap: 48px;
+            padding-bottom: 48px;
+        }
+
+        h3 {
+            max-width: 10ch;
+            margin: 0 0 24px;
+            font-size: clamp(2.5rem, 5.5vw, 4.3rem);
+            line-height: 1.08;
+            letter-spacing: -0.025em;
+        }
+
+        article p {
+            max-width: 54ch;
+            margin: 0 0 20px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 28px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            padding: 5px 12px;
+            border: 1px solid #526a85;
+            border-radius: 20px;
+            color: #e3eaf4;
+            font-size: 0.85rem;
+        }
+
+        figure {
+            margin: 0;
+            padding: 16px 16px 22px;
+            border: 1px solid #40546d;
+            border-radius: 28px;
+            background-color: #192b42;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            padding: 0 8px;
+            color: #c0cfdf;
+            font-size: 0.85rem;
+            text-align: center;
         }
 
         footer {
-            border-top: 2px solid #243447;
-            padding-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px 24px;
+            padding: 24px 0 36px;
+            border-top: 1px solid #40546d;
+            color: #c0cfdf;
+            font-size: 0.88rem;
         }
 
-        @media (max-width: 600px) {
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 760px) {
             body {
-                margin: 20px auto;
-                padding: 0 16px;
+                padding: 0 22px;
+            }
+
+            header {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 18px;
+                padding-top: 32px;
+            }
+
+            main > div {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            h3 {
+                max-width: 15ch;
+            }
+
+            figure {
+                max-width: 440px;
+                margin: 0 auto;
+            }
+
+            footer {
+                flex-direction: column;
+                padding-bottom: 100px;
             }
         }
     </style>
-
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <header>
         <h1>Himmat Grewal</h1>
-
         <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
+            <a href="./">Home</a>
             |
             <a href="itis3135/">ITIS3135</a>
         </nav>
@@ -66,30 +189,37 @@
 
     <main>
         <h2>Home</h2>
-
-        <img src="images/hg-logo.svg"
-             alt="HG initials logo"
-             width="96"
-             height="96">
-
-        <p>
-            Welcome! I am Himmat Grewal, a computer science student
-            at UNC Charlotte concentrating in cybersecurity.
-        </p>
-
-        <p>
-            I enjoy building projects, learning about technology,
-            and playing volleyball.
-        </p>
+        <!-- This div groups the introduction and illustration into a responsive two-column layout. -->
+        <div>
+            <article>
+                <h3>Learning By Building</h3>
+                <p>
+                    I am Himmat Grewal, a computer science student at
+                    UNC Charlotte concentrating in cybersecurity.
+                </p>
+                <p>
+                    I enjoy building projects, learning about technology,
+                    and playing volleyball. This is my personal space to
+                    share a little about myself and what interests me.
+                </p>
+                <ul aria-label="My interests">
+                    <li>Cybersecurity</li>
+                    <li>Building Projects</li>
+                    <li>Volleyball</li>
+                </ul>
+            </article>
+            <figure>
+                <img src="images/personal-court-circuit.svg"
+                    alt="A volleyball surrounded by circuit paths on a stylized court"
+                    width="640" height="560">
+                <figcaption>Code, curiosity, and time on the court.</figcaption>
+            </figure>
+        </div>
     </main>
 
     <footer>
         <p><em>Learning, building, and improving.</em></p>
-
-        <p>
-            <a href="https://github.com/hbsg007">My GitHub profile</a>
-        </p>
-
+        <p><a href="https://github.com/hbsg007">My GitHub Profile</a></p>
         <p>&copy; 2026 Himmat Grewal</p>
     </footer>
 
