@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="640" viewBox="0 0 800 640" role="img" aria-labelledby="title">
+<title id="title">Volleyball, practice notebook and water bottle arranged for a session</title><defs>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#153d32" stroke-opacity=".08"/></pattern>
+  <pattern id="net" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#e6ecdf" stroke-width="2"/></pattern>
+  <radialGradient id="ballshade" cx=".3" cy=".25" r=".85"><stop stop-color="#eef4d6"/><stop offset="1" stop-color="#b9caaa"/></radialGradient>
+  <clipPath id="ballclip"><circle r="100"/></clipPath>
+</defs>
+<path fill="#b9caaa" d="M0 0h800v640H0z"/><path fill="url(#grid)" d="M0 0h800v640H0z"/>
+<path d="M0 455L800 330V640H0Z" fill="#153d32"/>
+<path d="M580 43H758V250H580Z" fill="#dce9a6"/>
+<ellipse cx="376" cy="503" rx="285" ry="40" fill="#153d32" opacity=".18"/>
+<g transform="rotate(-12 250 408)"><rect x="122" y="295" width="230" height="253" rx="7" fill="#e6ecdf" stroke="#153d32" stroke-width="5"/>
+<path d="M149 298V547M178 344H302M178 368H282M178 392H299M178 462H277M178 486H296" stroke="#153d32" stroke-width="3"/>
+<circle cx="205" cy="428" r="11" fill="#f08c6d"/><path d="M226 428H290" stroke="#153d32" stroke-width="3"/></g>
+<g transform="rotate(9 640 366)"><rect x="594" y="243" width="95" height="276" rx="31" fill="#f08c6d" stroke="#153d32" stroke-width="5"/>
+<rect x="610" y="214" width="63" height="40" rx="8" fill="#153d32"/><rect x="599" y="328" width="85" height="89" fill="#dce9a6"/>
+<path d="M625 302V280M625 459V430" stroke="#e6ecdf" stroke-width="7" stroke-linecap="round"/></g>
+<g transform="translate(422 299) rotate(19) scale(1.48)">
+    <circle r="102" fill="#153d32"/>
+    <g clip-path="url(#ballclip)"><circle r="100" fill="url(#ballshade)"/>
+    <path d="M-100 -26Q-36 -107 38 -91Q56 -36 9 12Q-43 5 -100 -26Z" fill="#f08c6d"/>
+    <path d="M9 12Q66 -1 99 14Q112 70 35 99Q-9 61 9 12Z" fill="#dce9a6"/>
+    <g fill="none" stroke="#153d32" stroke-width="3.5"><path d="M-100 -26Q-42 8 9 12Q59 -30 38 -91"/>
+    <path d="M9 12Q-13 64 35 99M9 12Q62 -8 99 14"/>
+    <path d="M-78 -62Q-30 -35 27 -15M-38 -95Q-9 -63 34 -41M-98 19Q-48 42 -3 31M-72 72Q-40 79 2 63M76 -64Q60 -8 39 8M99 -19Q70 22 28 43M82 59Q47 58 19 64"/></g></g>
+    <ellipse cx="-29" cy="-42" rx="27" ry="12" fill="#e6ecdf" opacity=".24" transform="rotate(-35)"/></g><path d="M106 114H253M106 132H215" stroke="#153d32" stroke-width="4"/>
+<circle cx="92" cy="205" r="10" fill="#f08c6d"/></svg>

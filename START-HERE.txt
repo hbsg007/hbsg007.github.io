@@ -1,0 +1,60 @@
+VOLLEYBALL HOBBY SITE — HIMMAT GREWAL
+
+UPLOAD DESTINATION
+Charlotte / FileZilla: /public_html/itis3135/
+GitHub repository: hbsg007/hbsg007.github.io, inside its itis3135 folder
+
+1. Download and unzip upload-inside-itis3135.zip.
+2. OPEN the extracted folder. You should see index.html, introduction.html,
+   contract.html, about.html, hobby, images, scripts, styles and grewalwebdesign.co.
+3. In FileZilla's RIGHT panel, open /public_html/itis3135/.
+4. Drag the CONTENTS from step 2 into that right-hand folder. Overwrite matching
+   files when prompted. Wait until the transfer queue finishes; check for failures.
+5. Repeat in GitHub: open the repository's itis3135 folder, choose Add file >
+   Upload files, add those same contents, and commit. Wait for Pages to finish.
+
+IMPORTANT: The outer extracted folder is just a container for the download.
+The final remote file must be /public_html/itis3135/hobby/index.html.
+It must NOT be /public_html/itis3135/upload-inside-itis3135/hobby/index.html.
+This package's top-level index.html is your COURSE home page. Its upload
+destination is the course folder, not /public_html/.
+
+WHAT IS INCLUDED
+- All seven volleyball section views and matching original SVG illustrations.
+- Embedded CSS, local navigation script, favicon and live validation links.
+- The corrected Home, Introduction, Contract and About course pages.
+- Hobby as the first link in the SECOND course nav, along with your linked profiles.
+- Course images, styles, scripts and design-firm files used by those pages.
+
+PREVIEW BEFORE UPLOADING
+Open hobby/index.html locally in a web browser to review the design and all tabs.
+The local section navigation works, but online validator links need the public upload.
+
+AFTER UPLOADING
+1. Open https://webpages.charlotte.edu/hgrewal1/itis3135/
+2. Find the second menu in the footer and click Hobby.
+3. Confirm the address is https://webpages.charlotte.edu/hgrewal1/itis3135/hobby/
+4. Try Home, About, When, Where, How, Why and AI Prompts, including on your phone.
+5. Open the HTML, CSS and accessibility checks in the hobby footer. Also inspect
+   the Accumulus and Vicunadator reports on the live page.
+6. Test using only Tab and Enter. Each section change should move focus to its
+   heading, and the browser title should match that heading after the star.
+7. Use a private browser window to confirm the pages are public and up to date.
+
+SUBMISSION
+The latest instructions request your COURSE URL, whose second menu links to Hobby:
+https://webpages.charlotte.edu/hgrewal1/itis3135/
+
+Direct hobby URL if the assignment asks for it as well:
+https://webpages.charlotte.edu/hgrewal1/itis3135/hobby/
+
+Matching GitHub URLs:
+https://hbsg007.github.io/itis3135/
+https://hbsg007.github.io/itis3135/hobby/
+
+Complete two constructive peer reviews of classmates with fewer than two reviews.
+The assignment says feedback is one-third of the score and that there are no late
+submissions or redos. Finish the upload, live checks and reviews before the deadline.
+
+The files are built; uploading and live verification are still required. No grade
+or final manual accessibility result is guaranteed by automated checks.
