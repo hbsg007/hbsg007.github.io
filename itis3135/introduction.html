@@ -18,20 +18,7 @@
     <!-- The skip-link class and main-content id let keyboard users jump to the main content. -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header>
-        <h1>Himmat Grewal&#x27;s Honest Gorilla | ITIS3135</h1>
-        <img src="images/hg-logo.svg" alt="HG initials logo" width="96" height="96">
-        <p><em>Honest work. Strong foundations.</em></p>
-        <nav aria-label="Course navigation">
-            <a href="index.html">Home</a>
-            |
-            <a href="contract.html">Contract</a>
-            |
-            <a href="introduction.html">Introduction</a>
-            |
-            <a href="about.html">About</a>
-        </nav>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main id="main-content">
         <h2>Introduction: Himmat Grewal</h2>
@@ -162,32 +149,10 @@
         </blockquote>
     </main>
 
-    <footer>
-        <nav aria-label="My websites and profiles">
-            <a href="https://webpages.charlotte.edu/hgrewal1/itis3135/hobby/">Hobby</a>
-            |
-            <a href="https://webpages.charlotte.edu/hgrewal1/">CLT Web</a>
-            |
-            <a href="https://hbsg007.github.io/">GitHub.io</a>
-            |
-            <a href="https://github.com/hbsg007">GitHub</a>
-            |
-            <a href="https://hbsg007.github.io/itis3135/">Course.io</a>
-            |
-            <a href="https://www.freecodecamp.org/himmat_grewal">freeCodeCamp</a>
-            |
-            <a href="https://www.codecademy.com/profiles/HimmatGrewal">Codecademy</a>
-            |
-            <a href="https://www.linkedin.com/in/himmat-grewal-4552a9283">LinkedIn</a>
-        </nav>
-        <p>Designed by <a href="grewalwebdesign.co/">Grewal Web Design</a> &copy;2026</p>
-        <nav aria-label="Page validation">
-            <a data-validator="html" href="https://validator.w3.org/check?uri=referer">Validate HTML</a>
-            |
-            <a data-validator="css" href="https://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
-        </nav>
-    </footer>
+    <div data-include="components/footer.html"></div>
 
+    <!-- Paul Browne's HTMLInclude loads the shared course components. -->
+    <script src="scripts/include.min.js"></script>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
