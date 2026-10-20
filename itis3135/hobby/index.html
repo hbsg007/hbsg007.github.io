@@ -31,12 +31,10 @@
             line-height: 1.7;
         }
         header, main, footer { width: min(100% - 80px, 1200px); margin: 0 auto; }
-        h1, h2, h3, h4 { line-height: 1.12; }
-        h1, h2, h3 { font-family: "Arial Black", Arial, sans-serif; }
-        h1 { font-size: 1.75rem; margin: 0; letter-spacing: -.07em; }
+        h1 { font-family: "Arial Black", Arial, sans-serif; line-height: 1.12; font-size: 1.75rem; margin: 0; letter-spacing: -.07em; }
         h1 img { width: 38px; height: 38px; vertical-align: middle; margin-right: 10px; }
-        h2 { font-size: .88rem; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 32px; }
-        h3 { font-size: 1.45rem; margin: 0 0 16px; }
+        h2 { font-family: "Arial Black", Arial, sans-serif; line-height: 1.12; font-size: .88rem; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 32px; }
+        h3 { font-family: "Arial Black", Arial, sans-serif; line-height: 1.12; font-size: 1.45rem; margin: 0 0 16px; }
         p { margin: 0 0 20px; }
         a, a:visited { color: #22573f; text-underline-offset: 5px; text-decoration-thickness: 1px; }
         a:hover { text-decoration-thickness: 2px; }
@@ -58,7 +56,7 @@
         .section-nav a[aria-current="page"] { color: var(--paper); background: var(--ink); }
         .divider { color: var(--muted); font-size: .7rem; }
         .page-section { padding: 38px 0 56px; }
-        [hidden] { display: none !important; }
+        [hidden] { display: none; }
         .split { display: grid; grid-template-columns: .92fr 1.08fr; align-items: start; gap: 54px; }
         .hero-copy { padding-top: 25px; }
         .eyebrow { font-size: .74rem; font-weight: bold; text-transform: uppercase; letter-spacing: .13em; color: var(--muted); }
@@ -88,7 +86,7 @@
         .band { margin-top: 38px; background: var(--ink); color: var(--paper); border-radius: 5px; padding: 30px 36px; }
         .band p:last-child { margin-bottom: 0; }
         .band a, .band a:visited { color: var(--lime); }
-        .band h3 { color: var(--lime); }
+        .band-heading { color: var(--lime); }
         .schedule { width: 100%; border-collapse: collapse; margin: 36px 0 0; text-align: left; }
         caption { text-align: left; font-weight: bold; font-size: 1.25rem; margin-bottom: 12px; }
         th, td { padding: 16px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
@@ -98,7 +96,7 @@
         .small { font-size: .85rem; color: var(--muted); margin-top: 14px; }
         .place-list { list-style: none; padding: 0; margin: 34px 0 0; }
         .place-list li { display: grid; grid-template-columns: .7fr 1.3fr; gap: 38px; border-top: 1px solid var(--line); padding: 25px 0 5px; }
-        .place-list h3 { font-size: 1.2rem; }
+        .place-heading { font-size: 1.2rem; }
         .steps { counter-reset: touch; padding: 0; list-style: none; }
         .steps li { counter-increment: touch; position: relative; padding: 0 0 22px 60px; }
         .steps li::before { content: "0" counter(touch); position: absolute; left: 0; top: 1px; color: var(--muted); font-size: .9rem; border-top: 2px solid var(--ink); padding-top: 6px; }
@@ -112,7 +110,7 @@
         .quote { font-family: Georgia, serif; font-size: clamp(1.7rem, 3.6vw, 2.9rem); line-height: 1.2; margin: 0 0 16px; max-width: 42rem; }
         .prompt-list { margin: 36px 0 0; padding-left: 1.35rem; }
         .prompt-list li { padding: 20px 0 20px 12px; border-top: 1px solid var(--line); }
-        .prompt-list h3 { font-size: 1.05rem; }
+        .prompt-heading { font-size: 1.05rem; }
         .prompt-list p { margin-bottom: 0; }
         footer { border-top: 1px solid var(--line); padding: 28px 0 36px; font-size: .85rem; }
         .footer-row { display: flex; justify-content: space-between; gap: 20px; align-items: start; }
@@ -133,13 +131,13 @@
             .masthead { padding: 22px 0; gap: 10px; }
             .masthead p { max-width: 115px; font-size: .73rem; }
             .masthead strong { font-size: .6rem; letter-spacing: .02em; }
-            h1 { font-size: 1.4rem; }
+            .site-title { font-size: 1.4rem; }
             h1 img { width: 29px; height: 29px; margin-right: 5px; }
             .section-nav { gap: 2px; }
             .section-nav a { padding: 9px 11px; font-size: .83rem; }
             .divider { font-size: .6rem; }
             .page-section { padding: 28px 0 36px; }
-            h2 { margin-bottom: 26px; }
+            .section-heading { margin-bottom: 26px; }
             .split, .editorial-row, .place-list li { grid-template-columns: 1fr; gap: 22px; }
             .hero-title { font-size: clamp(3.1rem, 13vw, 4.7rem); }
             .page-title { font-size: 3rem; }
@@ -160,7 +158,7 @@
         }
         @media print {
             body { background: #e6ecdf; }
-            .page-section[hidden] { display: block !important; }
+            .page-section[hidden] { display: block; }
             .section-nav, .skip-link, .validation-links, .actions { display: none; }
             .page-section { break-before: page; }
             #what { break-before: auto; }
@@ -177,7 +175,7 @@
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <div class="masthead">
-            <h1><img src="images/volleyball-mark.svg" width="64" height="64" alt="">Volleyball</h1>
+            <h1 class="site-title"><img src="images/volleyball-mark.svg" width="64" height="64" alt="">Volleyball</h1>
             <p><strong>Himmat’s Courtside Field Guide</strong><em>Every touch counts.</em></p>
         </div>
         <nav class="section-nav" aria-label="Volleyball sections">
@@ -200,7 +198,7 @@
         <noscript><p>Section switching needs JavaScript. Please enable it to explore all seven sections.</p></noscript>
 
         <section id="what" class="page-section" aria-labelledby="what-title">
-            <h2 id="what-title" tabindex="-1">Home</h2>
+            <h2 id="what-title" class="section-heading" tabindex="-1">Home</h2>
             <div class="split">
                 <div class="hero-copy">
                     <p class="eyebrow">The game / The people / The next point</p>
@@ -213,13 +211,13 @@
                     </div>
                 </div>
                 <figure>
-                        <img src="images/first-touch.svg" alt="An illustrated volleyball floats above a net and coral court." width="800" height="640" fetchpriority="high">
+                        <img src="images/first-touch.svg" alt="An illustrated volleyball floats above a net and coral court." width="800" height="640">
                         <figcaption>A volleyball, a net, a new rally.
                             <p class="prompt-note"><em>AI-assisted SVG illustration. Brief: Create an original geometric volleyball poster: a large paneled ball floating over a net and a coral court, using forest green, sage and pale lime.</em></p>
                         </figcaption>
                     </figure>
             </div>
-            <ul class="fact-strip" aria-label="Volleyball at a glance">
+            <ul class="fact-strip">
                 <li><strong>06</strong><span>Players per side in standard indoor play</span></li>
                 <li><strong>03</strong><span>Team contacts to build an attack</span></li>
                 <li><strong>01</strong><span>Shared goal: keep the rally alive</span></li>
@@ -235,7 +233,7 @@
         </section>
 
         <section id="who" class="page-section" aria-labelledby="who-title" hidden>
-            <h2 id="who-title" tabindex="-1">About</h2>
+            <h2 id="who-title" class="section-heading" tabindex="-1">About</h2>
             <div class="split">
                 <div>
                     <p class="eyebrow">Who / Himmat Grewal</p>
@@ -257,13 +255,13 @@
                     </figure>
             </div>
             <div class="band">
-                <h3>Room for Beginners</h3>
+                <h3 class="band-heading">Room for Beginners</h3>
                 <p>You do not need a highlight reel to belong in a recreational game. Ask about the group’s level, learn the rotation, and bring a willingness to listen. A patient group makes learning much easier.</p>
             </div>
         </section>
 
         <section id="when" class="page-section" aria-labelledby="when-title" hidden>
-            <h2 id="when-title" tabindex="-1">Best Times</h2>
+            <h2 id="when-title" class="section-heading" tabindex="-1">Best Times</h2>
             <div class="split">
                 <div>
                     <p class="eyebrow">When / Find a rhythm</p>
@@ -292,7 +290,7 @@
         </section>
 
         <section id="where" class="page-section" aria-labelledby="where-title" hidden>
-            <h2 id="where-title" tabindex="-1">Places to Play</h2>
+            <h2 id="where-title" class="section-heading" tabindex="-1">Places to Play</h2>
             <div class="split">
                 <div>
                     <p class="eyebrow">Where / Charlotte and beyond</p>
@@ -309,14 +307,14 @@
                     </figure>
             </div>
             <ul class="place-list">
-                <li><h3>Campus Recreation</h3><div><p>UNC Charlotte UREC lists indoor and outdoor volleyball equipment among its checkout options. Check the open recreation information for locations, availability and access details.</p><p><a href="https://urec.charlotte.edu/open-recreation">Explore UREC open recreation</a></p></div></li>
-                <li><h3>Organized Campus Play</h3><div><p>Check the current intramural offerings when you want scheduled games. Sports, registration periods and eligibility can change, so use the live listing.</p><p><a href="https://urec.charlotte.edu/sports/intramural-sports">View UREC intramural sports</a></p></div></li>
-                <li><h3>A Local Court</h3><div><p>For a community gym or sand court, confirm public access, any reservation rules and the playing surface before arriving. Ask the group whether beginners are welcome.</p><p>Bring a ball if equipment is not provided, and leave the court ready for the next group.</p></div></li>
+                <li><h3 class="place-heading">Campus Recreation</h3><div><p>UNC Charlotte UREC lists indoor and outdoor volleyball equipment among its checkout options. Check the open recreation information for locations, availability and access details.</p><p><a href="https://urec.charlotte.edu/open-recreation">Explore UREC open recreation</a></p></div></li>
+                <li><h3 class="place-heading">Organized Campus Play</h3><div><p>Check the current intramural offerings when you want scheduled games. Sports, registration periods and eligibility can change, so use the live listing.</p><p><a href="https://urec.charlotte.edu/sports/intramural-sports">View UREC intramural sports</a></p></div></li>
+                <li><h3 class="place-heading">A Local Court</h3><div><p>For a community gym or sand court, confirm public access, any reservation rules and the playing surface before arriving. Ask the group whether beginners are welcome.</p><p>Bring a ball if equipment is not provided, and leave the court ready for the next group.</p></div></li>
             </ul>
         </section>
 
         <section id="how" class="page-section" aria-labelledby="how-title" hidden>
-            <h2 id="how-title" tabindex="-1">How to Play</h2>
+            <h2 id="how-title" class="section-heading" tabindex="-1">How to Play</h2>
             <div class="split">
                 <div>
                     <p class="eyebrow">How / Start with the next touch</p>
@@ -357,7 +355,7 @@
         </section>
 
         <section id="why" class="page-section" aria-labelledby="why-title" hidden>
-            <h2 id="why-title" tabindex="-1">Why Volleyball</h2>
+            <h2 id="why-title" class="section-heading" tabindex="-1">Why Volleyball</h2>
             <div class="split">
                 <div>
                     <p class="eyebrow">Why / More than the scoreboard</p>
@@ -384,7 +382,7 @@
         </section>
 
         <section id="ai-prompts" class="page-section" aria-labelledby="ai-prompts-title" hidden>
-            <h2 id="ai-prompts-title" tabindex="-1">AI Prompts</h2>
+            <h2 id="ai-prompts-title" class="section-heading" tabindex="-1">AI Prompts</h2>
             <div class="split">
                 <div>
                     <p class="eyebrow">Research / References / Tools</p>
@@ -401,13 +399,13 @@
                     </figure>
             </div>
             <ol class="prompt-list">
-                <li><h3>Finding Useful Sources</h3><p>Find official volleyball rules and UNC Charlotte recreation resources to support the information on the site.</p></li>
-                <li><h3>Understanding the Basics</h3><p>Help explain passing, setting and attacking in simple language, using the official rules as a reference.</p></li>
-                <li><h3>Building the Page</h3><p>Help draft the HTML, CSS and JavaScript for a seven-section volleyball site, with matching original illustrations and a readable layout.</p></li>
-                <li><h3>Checking the Work</h3><p>Check the markup, styling, links and section navigation against the assignment requirements, including keyboard accessibility.</p></li>
+                <li><h3 class="prompt-heading">Finding Useful Sources</h3><p>Find official volleyball rules and UNC Charlotte recreation resources to support the information on the site.</p></li>
+                <li><h3 class="prompt-heading">Understanding the Basics</h3><p>Help explain passing, setting and attacking in simple language, using the official rules as a reference.</p></li>
+                <li><h3 class="prompt-heading">Building the Page</h3><p>Help draft the HTML, CSS and JavaScript for a seven-section volleyball site, with matching original illustrations and a readable layout.</p></li>
+                <li><h3 class="prompt-heading">Checking the Work</h3><p>Check the markup, styling, links and section navigation against the assignment requirements, including keyboard accessibility.</p></li>
             </ol>
             <div class="band">
-                <h3>Sources and Attribution</h3>
+                <h3 class="band-heading">Sources and Attribution</h3>
                 <p>Rule summaries reference <a href="https://usavolleyball.org/play/rules-of-volleyball/">USA Volleyball</a>. Campus information links to <a href="https://urec.charlotte.edu/open-recreation">UNC Charlotte University Recreation</a>. All illustrations are original AI-assisted SVG code created for this project in October 2026.</p>
             </div>
         </section>
